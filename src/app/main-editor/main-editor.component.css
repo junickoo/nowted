@@ -1,0 +1,102 @@
+html {
+  width: 100%;
+  height: 100vh;
+}
+body {
+  display: flex;
+}
+.wrapper {
+  width: 80%;
+  height: auto;
+  padding: 3.13rem;
+}
+.title > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.date {
+  display: flex;
+  width: 100%;
+  border-bottom: 0.06rem solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.94rem;
+  padding-top: 1.88rem;
+}
+.date > span,
+.folder > span {
+  margin-right: 1.25rem;
+}
+.date > h1,
+.folder > h1 {
+  width: 6.25rem;
+}
+.folder {
+  display: flex;
+  width: 100%;
+  padding-top: 0.94rem;
+  padding-bottom: 1.88rem;
+}
+
+.style-bar {
+  width: 100%;
+  padding: 0.63rem 0;
+  border-bottom: 0.06rem solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  border-top: 0.06rem solid rgba(255, 255, 255, 0.1);
+  gap: 1.88rem;
+}
+.word-styling > select {
+  width: 8.31rem;
+  height: 1.75rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+select > option {
+  background-color: #181818;
+  color: white;
+}
+.font-size > select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  height: 1.75rem;
+  width: 2.75rem;
+}
+
+.typography {
+  display: flex;
+  align-items: center;
+  gap: 0.63rem;
+}
+.typography > img {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+}
+.typography > img:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.1rem;
+}
+
+.insert,
+.table {
+  display: flex;
+  align-items: center;
+  gap: 0.63rem;
+}
+.insert > img,
+.table > img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+textarea {
+  height: 60vh;
+  width: 100%;
+  overflow-y: auto;
+  background-color: transparent;
+  color: white;
+  padding: 1.88rem 0;
+  border: none;
+}

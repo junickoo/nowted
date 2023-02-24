@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="header">
+          <div>
+            <img class="logo" src="assets/logo-nowted.png" alt="" /><img
+              class="search"
+              src="assets/search-icon.png"
+            />
+          </div>
+          <div>
+            <button class="new-note"><p>+ New Note</p></button>
+          </div>
+        </div>
+        <div class="recents-note">
+          <h1 class="title">Recents</h1>
+          <div
+            class="sidebar-feature blue-hover"
+            *ngFor="let re of recents; let i = index"
+            (mouseover)="this.activeRecents = i"
+            (mouseout)="this.activeRecents = -1"
+          >
+            <img
+              *ngIf="activeRecents === i"
+              src="assets/document-icon.png"
+              alt=""
+            />
+            <img
+              *ngIf="activeRecents != i"
+              src="assets/document-nonactive-icon.png"
+              alt=""
+            />
+            <p>{{ re.title }}</p>
+          </div>
+        </div>
+        <div class="folders">
+          <div class="title-folders">
+            <h1>Folders</h1>
+            <span><img src="assets/new-folder-icon.png" alt="" /></span>
+          </div>
+          <div
+            class="sidebar-feature grey-hover"
+            *ngFor="let fo of folders; let i = index"
+            (mouseover)="this.activeFolders = i"
+            (mouseout)="this.activeFolders = -1"
+          >
+            <img
+              *ngIf="activeFolders === i"
+              src="assets/folder-active-icon.png"
+              alt=""
+            />
+            <img
+              *ngIf="activeFolders != i"
+              src="assets/folder-nonactive-icon.png"
+              alt=""
+            />
+            <p>{{ fo.title }}</p>
+          </div>
+        </div>
+        <div class="more">
+          <h1 class="title">More</h1>
+          <div class="sidebar-feature grey-hover">
+            <img src="assets/star-icon.png" alt="" />
+            <p>Favourite</p>
+          </div>
+          <div class="sidebar-feature grey-hover">
+            <img src="assets/trash-icon.png" alt="" />
+            <p>Trash</p>
+          </div>
+          <div class="sidebar-feature grey-hover">
+            <img src="assets/archived-icon.png" alt="" />
+            <p>Archived Noted</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
